@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1>Assignment 11</h1>
+    
+<script>
+    dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    // dayNames = ["Sun","Mon","Tues","Wed","Thurs","Fri","Sat"];
+    var monthName = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul","Aug", "Sep", "Oct", "Nov", "Dec"];
+        function now(){
+        var forCheck = []
+        var time = new Date();
+        var year = time.getFullYear().toString()
+        var month = monthName[time.getMonth()]
+        var date = time.getDate();
+        var hour = time.getHours();
+        var min = time.getMinutes();
+        var day = dayNames[time.getDay()]
+        console.log(`Formate 1: ${day}, ${date} ${month}, ${year}`)
+        console.log(`Formate 2: ${date}-${time.getMonth()+1}-${year.slice(-2)}`)
+        console.log(`Formate 5: ${date} ${month} ${year}`)
+        console.log(`Formate 3: ${date}.${time.getMonth()+1}.${year.slice(-2)}`)
+        console.log(`Formate 4: ${month}-${year.slice(-2)}`)
+
+        return forCheck[date,month,min,hour]
+    }
+    
+    now()
+    
+</script>
+</body>
+</html>
